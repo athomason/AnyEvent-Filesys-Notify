@@ -1,6 +1,6 @@
 package AnyEvent::Filesys::Notify::Role::Mac;
 
-use Moose::Role;
+use Mouse::Role;
 use namespace::autoclean;
 use AnyEvent;
 use Mac::FSEvents;

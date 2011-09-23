@@ -1,6 +1,6 @@
 package AnyEvent::Filesys::Notify::Role::Fallback;
 
-use Moose::Role;
+use Mouse::Role;
 use namespace::autoclean;
 use AnyEvent;
 use Carp;

@@ -5,7 +5,7 @@ my $build = Module::Build->new(
     create_readme => 1,
 
     requires => {
-        'Moose'                => 0,
+        'Mouse'                => 0,
         'AnyEvent'             => 0,
         'File::Find::Rule'     => 0,
         'Cwd'                  => 0,

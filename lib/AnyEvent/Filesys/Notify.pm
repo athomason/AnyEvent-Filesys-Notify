@@ -1,7 +1,7 @@
 package AnyEvent::Filesys::Notify;
 
-use Moose;
-use Moose::Util qw(apply_all_roles);
+use Mouse;
+use Mouse::Util qw(apply_all_roles);
 use namespace::autoclean;
 use AnyEvent;
 use File::Find::Rule;
