@@ -115,8 +115,8 @@ sub _is_path_modified {
     my ( $old_path, $new_path ) = @_;
 
     return   if $new_path->{is_dir};
-    return 1 if $new_path->{mtime} != $old_path->{mtime};
-    return 1 if $new_path->{size} != $old_path->{size};
+    return 1 if ($new_path->{mtime} || 0) != $old_path->{mtime};
+    return 1 if ($new_path->{size} || 0) != $old_path->{size};
     return;
 }
 
