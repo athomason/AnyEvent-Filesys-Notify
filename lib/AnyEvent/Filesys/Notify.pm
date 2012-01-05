@@ -69,7 +69,7 @@ sub _scan_fs {
     my @paths = ref $args[0] eq 'ARRAY' ? @{ $args[0] } : @args;
 
     # Separated into two lines to avoid stat on files multiple times.
-    my %files = map { $_ => 1 } File::Find::Rule->in(@paths);
+    my %files = map { $_ => 1 } File::Find::Rule->extras->({untaint => 1})->in(@paths);
     %files = map { abs_path($_) => _stat($_) } keys %files;
 
     return \%files;
